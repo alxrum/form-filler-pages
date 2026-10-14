@@ -22,6 +22,7 @@ body { background: transparent; font: 14px/1.4 -apple-system, BlinkMacSystemFont
 .item .name { flex: 1; }
 .pin { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; box-shadow: 0 0 0 3px #e5322d; color: #5f6368; position: relative; }
 .pin svg { width: 24px; height: 24px; }
+.badge { position: absolute; width: 36px; height: 36px; border-radius: 50%; background: #e5322d; color: #fff; font-weight: 700; font-size: 19px; display: grid; place-items: center; box-shadow: 0 0 0 3px #fff, 0 2px 8px rgba(0,0,0,.25); z-index: 2; }
 .popup { position: absolute; top: 62px; right: 10px; width: 250px; background: #fbf9f6; border: 1px solid #e3ded7; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.2); padding: 18px 16px; text-align: center; }
 .popup .hero { width: 44px; height: 44px; border-radius: 12px; background: #fbeccd; margin: 0 auto 10px; display: grid; place-items: center; }
 .popup b { display: block; font-size: 15px; margin-bottom: 6px; color: #2a2520; }
@@ -36,23 +37,21 @@ body { background: transparent; font: 14px/1.4 -apple-system, BlinkMacSystemFont
 </svg>
 
 <!-- arrow: its head is the top-right corner of the 90x70 box; the box is placed so the head touches the ringed target -->
-<div class="card" id="step-1"><div class="win">
+<!-- steps 1 + 2 on one picture: the menu is open under the ringed puzzle, the pin is ringed; numbered badges -->
+<div class="card" id="step-1"><div class="win" style="height:270px">
   <div class="bar"><div class="omni">google.com</div><div class="tb big"><svg><use href="#puzzle"/></svg></div></div>
-  <div class="page"><div><b>G</b><b>o</b><b>o</b><b>g</b><b>l</b><b>e</b></div></div>
-  <svg class="arrow" style="right:46px; top:56px"><use href="#arrow"/></svg>
-</div></div>
-
-<div class="card" id="step-2"><div class="win" style="height:270px">
-  <div class="bar"><div class="omni">google.com</div><div class="tb"><svg><use href="#puzzle"/></svg></div></div>
-  <div class="menu"><h6>Extensions</h6>
+  <span class="badge" style="right:66px; top:15px">1</span>
+  <div class="menu" style="top:66px"><h6>Extensions</h6>
     <div class="item"><svg class="logo"><use href="#logo"/></svg><span class="name">Form Filler</span><span class="pin"><svg><use href="#pin"/></svg></span></div>
   </div>
-  <svg class="arrow" style="right:6px; top:150px; transform: rotate(-12deg)"><use href="#arrow"/></svg>
+  <svg class="arrow" style="right:6px; top:158px; transform: rotate(-12deg)"><use href="#arrow"/></svg>
+  <span class="badge" style="right:96px; top:210px">2</span>
 </div></div>
 
-<div class="card" id="step-3"><div class="win">
+<div class="card" id="step-2"><div class="win">
   <div class="bar"><div class="omni">google.com</div><div class="tb big"><svg><use href="#logo"/></svg></div><div class="tb"><svg><use href="#puzzle"/></svg></div></div>
   <div class="page"><div><b>G</b><b>o</b><b>o</b><b>g</b><b>l</b><b>e</b></div></div>
   <svg class="arrow" style="right:90px; top:56px"><use href="#arrow"/></svg>
+  <span class="badge" style="right:178px; top:112px">3</span>
 </div></div>
 </body></html>
